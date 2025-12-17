@@ -84,3 +84,54 @@ defi-esusu-evm/
 │   ├── src/constants.ts     # Contract Addresses & ABIs
 │   └── tailwind.config.js   # Styling Config
 └── hardhat.config.ts        # Blockchain Network Config
+
+
+🚀 Getting Started
+Follow these steps to run the project locally.
+
+1. Prerequisites
+Node.js (v18 or higher) installed.
+
+Metamask Wallet installed in your browser.
+
+BlockDAG Testnet Funds: Get free BDAG coins from the BlockDAG Faucet.
+
+2. Clone the Repository
+Bash
+
+git clone [https://github.com/Zeeknow/DeFiEsusu.git]
+cd defi-esusu-evm
+3. Smart Contract Setup (Backend)
+Install dependencies and deploy the contracts to BlockDAG.
+
+Bash
+
+# Install Hardhat dependencies
+npm install
+
+# Compile Contracts
+npx hardhat compile
+
+# Deploy to BlockDAG Testnet
+npx hardhat run scripts/deploy.ts --network blockdag
+Copy the DeFiEsusu and MockUSDC addresses printed in the terminal. You will need them for the frontend.
+
+4. Frontend Setup (UI)
+Connect the interface to your deployed contracts.
+
+Bash
+
+# Go to frontend folder
+cd frontend
+
+# Install UI dependencies
+npm install
+
+# IMPORTANT: Update Constants
+# Open src/constants.ts and paste your new Contract Addresses.
+Run the App:
+
+Bash
+
+npm run dev
+Open http://localhost:3000 in your browser.
